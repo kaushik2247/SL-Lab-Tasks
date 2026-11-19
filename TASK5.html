@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item Bill Form</title>
+</head>
+<body>
+<h1>Enter Item Details</h1>
+<form method="post" action="data.php">
+<label for="itemCodes">Item Codes (comma-separated):</label><br>
+<input type="text" id="itemCodes" name="itemCodes" required><br><br>
+<label for="itemNames">Item Names (comma-separated):</label><br>
+<input type="text" id="itemNames" name="itemNames" required><br><br>
+<label for="unitsSold">Units Sold (comma-separated):</label><br>
+<input type="text" id="unitsSold" name="unitsSold" required><br><br>
+<label for="rates">Rates (comma-separated):</label><br>
+<input type="text" id="rates" name="rates" required><br><br>
+<button type="submit">Generate Bill</button>
+</form>
+</body>
+</html>

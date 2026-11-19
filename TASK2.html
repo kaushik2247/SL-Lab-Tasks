@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation Example</title>
+<style>
+ body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #f4f4f9;
+ }
+ header {
+ background-color: #4CAF50;
+ color: white;
+ padding: 1rem;
+ text-align: center;
+ }
+.form-container {
+ padding: 2rem;
+ background-color: #ffffff;
+ margin: 2rem auto;
+ width: 50%;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ border-radius: 8px;
+ }
+.form-container h2 {
+ text-align: center;
+ }
+.form-group {
+ margin-bottom: 1rem;
+ }
+.form-group label {
+ display: block;
+ margin-bottom: 0.5rem;
+ }
+.form-group input {
+ width: 100%;
+ padding: 0.5rem;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ box-sizing: border-box;
+ }
+.form-group .error {
+ color: red;
+ font-size: 0.875rem;
+ margin-top: 0.5rem;
+ }
+ button {
+ background-color: #4CAF50;
+ color: white;
+ border: none;
+ padding: 0.75rem 1.5rem;
+ border-radius: 4px;
+ cursor: pointer;
+ display: block;
+ margin: 0 auto;
+ }
+button:hover {
+ background-color: #45a049;
+ }
+</style>
+<script>
+ function validateForm(event) {
+event.preventDefault();
+ const firstName = document.getElementById('first-name');
+ const lastName = document.getElementById('last-name');
+ const email = document.getElementById('email');
+ const userId = document.getElementById('user-id');
+ const password = document.getElementById('password');
+ const confirmPassword = document.getElementById('confirm-password');
+ let isValid = true;
+ // Clear previous error messages
+document.querySelectorAll('.error').forEach(error =>error.textContent = '');
+ // Validate first name
+ if (!firstName.value.trim()) {
+document.getElementById('first-name-error').textContent = 'First name is required.';
+isValid = false;
+ }
+ // Validate last name
+ if (!lastName.value.trim()) {
+document.getElementById('last-name-error').textContent = 'Last name is required.';
+isValid = false;
+ }
+ // Validate email
+ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+ if (!email.value.trim()) {
+document.getElementById('email-error').textContent = 'Email is required.';
+isValid = false;
+ } else if (!emailPattern.test(email.value)) {
+document.getElementById('email-error').textContent = 'Enter a valid email address.';
+isValid = false;
+ }
+ // Validate user ID
+ if (!userId.value.trim()) {
+document.getElementById('user-id-error').textContent = 'User ID is required.';
+isValid = false;
+ }
+ // Validate password
+ if (!password.value.trim()) {
+document.getElementById('password-error').textContent = 'Password is required.';
+isValid = false;
+ }
+ // Validate confirm password
+ if (!confirmPassword.value.trim()) {
+document.getElementById('confirm-password-error').textContent = 'Confirm your password.';
+isValid = false;
+ } else if (password.value !== confirmPassword.value) {
+document.getElementById('confirm-password-error').textContent = 'Passwords do not match.';
+isValid = false;
+ }
+ // If valid, show success alert
+ if (isValid) {
+alert('Form submitted successfully!');
+document.getElementById('registration-form').reset();
+ }
+ }
+</script>
+</head>
+<body>
+<header>
+<h1>User Registration</h1>
+</header>
+<div class="form-container">
+<h2>Register</h2>
+<form id="registration-form" onsubmit="validateForm(event)">
+<div class="form-group">
+<label for="first-name">First Name:</label>
+<input type="text" id="first-name">
+<div id="first-name-error" class="error"></div>
+</div>
+<div class="form-group">
+<label for="last-name">Last Name:</label>
+<input type="text" id="last-name">
+<div id="last-name-error" class="error"></div>
+</div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" id="email">
+<div id="email-error" class="error"></div>
+</div>
+<div class="form-group">
+<label for="user-id">User ID:</label>
+<input type="text" id="user-id">
+<div id="user-id-error" class="error"></div>
+</div>
+<div class="form-group">
+<label for="password">Password:</label>
+<input type="password" id="password">
+<div id="password-error" class="error"></div>
+</div>
+<div class="form-group">
+<label for="confirm-password">Confirm Password:</label>
+<input type="password" id="confirm-password">
+<div id="confirm-password-error" class="error"></div>
+</div>
+<button type="submit">Submit</button>
+</form>
+</div>
+</body>
+</html>

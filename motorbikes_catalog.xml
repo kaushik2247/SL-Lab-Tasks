@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="motorbikes_catalog.xsl"?>
+<!DOCTYPE catalog SYSTEM "motorbikes_catalog.dtd">
+<catalog>
+<motorbike>
+<make>Honda</make>
+<model>CBR500R</model>
+<year>2023</year>
+<color>Red</color>
+<engine>
+<engine_number>H123456789</engine_number>
+<number_of_cylinders>2</number_of_cylinders>
+<type_of_fuel>Petrol</type_of_fuel>
+</engine>
+<chassis_number>12345ABCD6789</chassis_number>
+<accessories disc_brake="yes" auto_start="yes" radio="no" />
+</motorbike>
+<motorbike>
+<make>Kawasaki</make>
+<model>Ninja 400</model>
+<year>2023</year>
+<color>Green</color>
+<engine>
+<engine_number>K987654321</engine_number>
+<number_of_cylinders>2</number_of_cylinders>
+<type_of_fuel>Petrol</type_of_fuel>
+</engine>
+<chassis_number>67890EFGH1234</chassis_number>
+<accessories disc_brake="yes" auto_start="yes" radio="yes" />
+</motorbike>
+<motorbike>
+<make>Yamaha</make>
+<model>YZF-R3</model>
+<year>2022</year>
+<color>Blue</color>
+<engine>
+<engine_number>Y234567890</engine_number>
+<number_of_cylinders>2</number_of_cylinders>
+<type_of_fuel>Petrol</type_of_fuel>
+</engine>
+<chassis_number>23456IJKL7890</chassis_number>
+<accessories disc_brake="yes" auto_start="no" radio="no" />
+</motorbike>
+<motorbike>
+<make>BMW</make>
+<model>G310R</model>
+<year>2021</year>
+<color>Black</color>
+<engine>
+<engine_number>B310000123</engine_number>
+<number_of_cylinders>1</number_of_cylinders>
+<type_of_fuel>Petrol</type_of_fuel>
+</engine>
+<chassis_number>87654MNO1234</chassis_number>
+<accessories disc_brake="yes" auto_start="yes" radio="yes" />
+</motorbike>
+</catalog>

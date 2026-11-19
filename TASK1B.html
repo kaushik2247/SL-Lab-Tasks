@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSE-J Timetable</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+        background: white;
+        color: #222;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        margin-top: 0;
+    }
+
+    .name {
+        text-align: right;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    th {
+        background: #d9e2f3;
+        padding: 12px 8px;
+        border: 1px solid #999;
+    }
+
+    td {
+        padding: 14px 8px;
+        border: 1px solid #999;
+    }
+
+    .day {
+        font-weight: bold;
+        background: #f2f2f2;
+    }
+
+    .lunch {
+        background: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .lab {
+        background: #eaf2f8;
+    }
+
+    .info {
+        margin-top: 18px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+        body {
+            margin: 15px;
+        }
+
+        table {
+            min-width: 950px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="name">S.Kaushik Roll no:25241A05RR </div>
+
+<h1>Gokaraju Rangaraju Institute of Engineering & Technology</h1>
+<h2>II Year | Semester CSE-J | Academic Year 2026-27</h2>
+
+<div class="table-container">
+<table>
+    <tr>
+        <th>DAY</th>
+        <th>9:00-9:50</th>
+        <th>9:50-10:40</th>
+        <th>10:40-11:30</th>
+        <th>11:30-12:10</th>
+        <th>12:10-1:00</th>
+        <th>1:00-1:50</th>
+        <th>1:50-2:40</th>
+        <th>2:40-3:30</th>
+    </tr>
+
+    <tr>
+        <td class="day">Monday</td>
+        <td colspan="2">DBMS</td>
+        <td>COSM</td>
+        <td rowspan="6" class="lunch">Lunch</td>
+        <td>COSM</td>
+        <td colspan="3" class="lab">DBMS LAB</td>
+    </tr>
+
+    <tr>
+        <td class="day">Tuesday</td>
+        <td>DM</td>
+        <td colspan="2">DBMS</td>
+        <td colspan="2">JP</td>
+        <td colspan="2">DLD</td>
+        <td>JP LAB</td>
+    </tr>
+
+    <tr>
+        <td class="day">Wednesday</td>
+        <td colspan="3" class="lab">IP LAB</td>
+        <td>DLD</td>
+        <td>JP</td>
+        <td colspan="2"></td>
+    </tr>
+
+    <tr>
+        <td class="day">Thursday</td>
+        <td>DM</td>
+        <td colspan="2">DBMS</td>
+        <td>ES</td>
+        <td colspan="2">COSM</td>
+        <td colspan="2"></td>
+    </tr>
+
+    <tr>
+        <td class="day">Friday</td>
+        <td colspan="3">T&amp;P</td>
+        <td colspan="4">T&amp;P </td>
+    </tr>
+
+    <tr>
+        <td class="day">Saturday</td>
+        <td>DM</td>
+        <td>DLD</td>
+        <td>JP</td>
+        <td></td>
+        <td>JP</td>
+        <td colspan="2" class="lab">SL LAB</td>
+    </tr>
+</table>
+</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Toggle two images on click JavaScript</title>
+</head>
+<body>
+<img src="car.jpg" id="image" width="200" alt="Vehicle">
+<br>
+<button onclick="toggleImage()">Toggle Image</button>
+<script>
+var x = 0;
+var img = document.getElementById('image');
+function toggleImage(){
+if(x == 0)
+{
+img.src = "bike.jpg";
+x = 1;
+}
+else
+{
+img.src = "car.jpg";
+x = 0;
+}
+}
+</script>
+</body>
+</html>
